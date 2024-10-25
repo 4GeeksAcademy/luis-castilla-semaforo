@@ -1,83 +1,133 @@
 #app {
   background-image: url(https://elperuano.pe/fotografia/thumbnail/2021/08/17/000127499M.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100vh;
   background-position: center center;
+  position: relative; /* Importante para que funcione el posicionamiento absoluto de los elementos hijos */
 }
 
-.contenedor{
-  margin: auto;
+.contenedor {
+  margin-left: 0;
   width: 30%;
 }
 
-.poste{
+.contenedor2 {
+  margin-right: 0;
+  width: 30%;
+}
+
+.separar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.poste {
   width: 20px;
-  height: 20px;
-  background: black;
+  height: 50px;
+  background: rgb(0, 0, 0);
   margin: auto;
+  border: 2px solid rgb(68, 68, 68);
+  border-bottom: none;
+  border-top: none;
 }
 
 .semaforo {
   margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    width: 70px;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .foco {
-    width: 40px;
-    height: 40px;
-    margin: 10px;
-    border-radius: 50%;
-    background-color: #444;
-    transition: background-color 0.3s;
-  }
-  
-  .red {
-    background-color: red;
-  }
-  
-  .yellow {
-    background-color: yellow;
-  }
-  
-  .green {
-    background-color: green;
-  }
-  
-  .purple {
-    background-color: #b0b;
-  }
-  
-  .activo-red {
-    box-shadow: 0 0 20px 5px rgb(250, 1, 1);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  width: 70px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(68, 68, 68);
+}
 
-  .activo-yellow {
-    box-shadow: 0 0 20px 5px rgb(246, 255, 0);
-  }
+.foco {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #444;
+  transition: background-color 0.3s;
+}
 
-  .activo-green {
-    box-shadow: 0 0 20px 5px rgb(0, 255, 4);
-  }
+.red {
+  background-color: red;
+  border: 2px solid rgb(0, 0, 0);
+}
 
-  .activo-purple {
-    box-shadow: 0 0 20px 5px rgb(230, 3, 251);
-  }
+.yellow {
+  background-color: yellow;
+  border: 2px solid rgb(0, 0, 0);
+}
 
-  .boton{
-    display: inline-block;
-    margin-left: 10px;
-  }
+.green {
+  background-color: green;
+  border: 2px solid rgb(0, 0, 0);
+}
 
-  .container-boton{
-    margin: auto;
-    width: 65%;
-    margin-top: 60vh;
-  }
-  
+.purple {
+  background-color: #b0b;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.activo-red {
+  box-shadow: 0 0 20px 5px rgb(250, 1, 1);
+}
+
+.activo-yellow {
+  box-shadow: 0 0 20px 5px rgb(246, 255, 0);
+}
+
+.activo-green {
+  box-shadow: 0 0 20px 5px rgb(0, 255, 4);
+}
+
+.activo-purple {
+  box-shadow: 0 0 20px 5px rgb(230, 3, 251);
+}
+
+.container-boton {
+  position: absolute;
+  top: 82vh;
+  right: 0px; 
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton {
+  background-color: #000; 
+  color: #fff; 
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px 0; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+}
+
+.boton:active {
+  opacity: 0.9; 
+}
+
+.contenedor,
+.contenedor2 {
+  width: 30%;
+}
+
+.separar {
+  display: flex;
+  justify-content: space-between;
+}
